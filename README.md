@@ -1,12 +1,13 @@
 Install
 =======
 
-@wget --no-check-certificate https://raw.github.com/limpangel/dotfiles/master/install.sh -O - | sh@
+    wget --no-check-certificate https://raw.github.com/limpangel/dotfiles/master/install.sh -O - | sh
 
 Vim
 ===
 
 Various sources from where I draw inspiration for vim::
+
     http://stevelosh.com/blog/2010/09/coming-home-to-vim
     https://github.com/sjl/dotfiles
     http://sontek.net/turning-vim-into-a-modern-python-ide

@@ -1,5 +1,4 @@
 #!/bin/bash
-
 function link_file {
     source="${PWD}/$1"
     target="${HOME}/${1/_/.}"
@@ -17,10 +16,12 @@ if [ -d ~/.dotfiles ]; then
 else
     git clone git://github.com/limpangel/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
-    for f in _*; do
-        link_file $f
-    done
 fi
+
+for f in _*
+do
+    link_file $f
+done
 
 git submodule sync
 git submodule init

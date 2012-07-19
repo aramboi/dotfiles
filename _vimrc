@@ -1,9 +1,6 @@
 set nocompatible              " Don't be compatible with vi
 let mapleader=","             " Change the leader to be a comma vs slash
 
-" Run pep8
-let g:pep8_map='<leader>8'
-
 " Reload .vimrc
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
@@ -37,15 +34,10 @@ nnoremap <leader><space> :nohlsearch<CR>
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
-" Select the item in the list with enter
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" Close preview window automatically when we move around
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
 " Load pathogen with docs for all plugins
 filetype off
-call pathogen#runtime_append_all_bundles()
+"call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
 
 " Basic settings
@@ -89,7 +81,7 @@ set shiftround              " Rounds indent to a multiple of shiftwidth
 set matchpairs+=<:>         " Show matching <> (html mainly) as well
 set foldmethod=indent       " Allow us to fold on indents
 set foldlevel=99            " Don't fold by default
-set colorcolumn=80          " Color column to mark the end 80 char limit
+set colorcolumn=79          " Color column to mark the end 80 char limit
 
 " Creates undo files (*.un~) for undoes after close/open file (vim 7.3)
 set undofile
@@ -130,8 +122,17 @@ au FileType python set omnifunc=pythoncomplete#Complete
 au FileType python setlocal cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
+" Run pep8
+let g:pep8_map='<leader>8'
+
 " Don't let pyflakes use the quickfix window
 let g:pyflakes_use_quickfix = 0
+
+" Select the item in the list with enter
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Close preview window automatically when we move around
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " Display
 if has("gui_running")

@@ -16,6 +16,3 @@
 [submodule "_vim/bundle/pyflakes"]
 	path = _vim/bundle/pyflakes
 	url = git://github.com/mitechie/pyflakes-pathogen.git
-[submodule "_vim/bundle/autoclose"]
-	path = _vim/bundle/autoclose
-	url = git://github.com/andrewle/vim-autoclose.git

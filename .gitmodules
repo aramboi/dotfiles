@@ -16,3 +16,6 @@
 [submodule "_vim/bundle/pyflakes"]
 	path = _vim/bundle/pyflakes
 	url = git://github.com/mitechie/pyflakes-pathogen.git
+[submodule "_vim/bundle/nerdcommenter"]
+	path = _vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git

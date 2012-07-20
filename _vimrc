@@ -1,3 +1,7 @@
+" Author - Angel Ramboi <angel.ramboi@gmail.com>
+" https://github.com/limpangel/dotfiles
+" Dependencies - pep8, pyflakes
+
 set nocompatible              " Don't be compatible with vi
 let mapleader=","             " Change the leader to be a comma vs slash
 
@@ -28,9 +32,6 @@ command! Q :q
 command! Wq :wq
 command! WQ :wq
 
-" Hide matches on <leader>space
-nnoremap <leader><space> :nohlsearch<CR>
-
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
@@ -46,7 +47,7 @@ filetype on                   " Try to detect filetypes
 filetype plugin indent on     " Enable loading indent file for filetype
 set t_Co=256                  " Support for 256 color terminal
 set number                    " Display line numbers
-set numberwidth=1             " Using only 1 column (and 1 space) while possible
+set numberwidth=1             " Using only 1 column (and 1 space) if possible
 set background=dark           " We are using dark background
 set title                     " Show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
@@ -67,7 +68,6 @@ set nostartofline           " Avoid moving cursor to BOL when jumping around
 set virtualedit=block       " Let cursor move past the last char in <C-v> mode
 set scrolloff=3             " Keep 3 context lines above and below the cursor
 set backspace=2             " Allow backspacing over autoindent, EOL, and BOL
-set showmatch               " Briefly jump to a paren once it's balanced
 set nowrap                  " Don't wrap text
 set linebreak               " Don't wrap textin the middle of a word
 set autoindent              " Always set autoindenting on
@@ -112,10 +112,20 @@ set listchars=tab:>-,eol:‖,trail:»,precedes:<,extends:>
 set list
 
 " Searching and Patterns
+nnoremap / /\v
+vnoremap / /\v
 set ignorecase              " Default to using case insensitive searches,
 set smartcase               " Unless uppercase letters are used in the regex.
 set hlsearch                " Highlight searches by default.
+set showmatch               " Briefly jump to a paren once it's balanced
 set incsearch               " Incrementally search while typing a /regex
+set gdefault                " Applies substitutions globally on lines
+
+" Hide matches on <leader>space
+nnoremap <leader><space> :noh<CR>
+nnoremap <tab> %
+vnoremap <tab> %
+
 
 " Python
 au FileType python set omnifunc=pythoncomplete#Complete

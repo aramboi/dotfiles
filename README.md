@@ -6,6 +6,8 @@ Install
 Vim
 ===
 
+NOTE: Install dependencies: pep8
+
 Various sources from where I draw inspiration for the vim configuration
 
 * http://stevelosh.com/blog/2010/09/coming-home-to-vim

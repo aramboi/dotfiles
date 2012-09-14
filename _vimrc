@@ -84,7 +84,7 @@ set foldlevel=99            " Don't fold by default
 set colorcolumn=79          " Color column to mark the end 80 char limit
 
 " Creates undo files (*.un~) for undoes after close/open file (vim 7.3)
-set undofile
+"set undofile
 
 " Reading/Writing
 set noautowrite             " Never write a file unless I request it

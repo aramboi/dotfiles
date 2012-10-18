@@ -52,13 +52,14 @@ set background=dark           " We are using dark background
 set title                     " Show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
+colorscheme molokai           " I like molokai as my collor scheme
 
 " Ignore these files when completing
 set wildignore+=*.o,*.obj,.git,*.pyc,*swp,eggs/**,*.egg-info/**,*.un~
 
 " Insert completion - don't select first item, follow typing in autocomplete
 set completeopt=menuone,longest,preview
-set pumheight=6             " Keep a small completion window
+set pumheight=8             " Keep a small completion window
 
 " Moving Around/Editing
 set encoding=utf-8          " Set encoding to UTF-8
@@ -126,7 +127,7 @@ nnoremap <tab> %
 vnoremap <tab> %
 
 
-" Python
+" Python specific
 au FileType python set omnifunc=pythoncomplete#Complete
 au FileType python setlocal cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
@@ -134,21 +135,3 @@ au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\
 " Run pep8
 let g:pep8_map='<leader>8'
 
-" Don't let pyflakes use the quickfix window
-let g:pyflakes_use_quickfix = 0
-
-" Select the item in the list with enter
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" Close preview window automatically when we move around
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
-" Display
-if has("gui_running")
-    " Remove menu bar
-    set guioptions-=m
-    " Remove toolbar
-    set guioptions-=T
-endif
-
-colorscheme molokai

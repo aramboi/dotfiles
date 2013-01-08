@@ -6,7 +6,7 @@ Install
 Vim
 ===
 
-NOTE: Install dependencies: pep8
+NOTE: Install dependencies: pep8, pyflakes
 
 Various sources from where I draw inspiration for the vim configuration
 

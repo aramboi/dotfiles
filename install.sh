@@ -18,7 +18,7 @@ if [ -d ~/.dotfiles ]; then
 
     sudo pip install pip --upgrade
     sudo pip install flake8 --upgrade
-    vim +BundleInstall +qall
+    vim +BundleInstall! +qall
 else
     git clone git://github.com/limpangel/dotfiles.git ~/.dotfiles
     git clone https://github.com/gmarik/vundle.git ~/.dotfiles/.vim/bundle/vundle

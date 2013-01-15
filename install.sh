@@ -15,12 +15,16 @@ if [ -d ~/.dotfiles ]; then
     git pull origin master
     cd ~/.dotfiles
     git pull origin master
+
+    sudo pip install pip --upgrade
+    sudo pip install flake8 --upgrade
+    vim +BundleInstall +qall
 else
     git clone git://github.com/limpangel/dotfiles.git ~/.dotfiles
     git clone https://github.com/gmarik/vundle.git ~/.dotfiles/.vim/bundle/vundle
     cd ~/.dotfiles
 
-    for f in .*
+    for f in .vim .vimrc .zshrc .gitconfig
     do
         link_file $f
     done
@@ -30,5 +34,3 @@ else
     sudo pip install flake8 --upgrade
     vim +BundleInstall +qall
 fi
-
-

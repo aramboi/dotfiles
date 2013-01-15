@@ -3,43 +3,13 @@
 " Dependencies - pep8, pyflakes
 
 set nocompatible              " Don't be compatible with vi
-let mapleader=","             " Change the leader to be a comma vs slash
+filetype off
 
-" Reload .vimrc
-map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
-
-" Ctrl-jklm  changes to that split
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
-
-" Open NerdTree
-map <leader>n :NERDTreeToggle<CR>
-
-" Toggle paste mode
-map <leader>p :set paste!<CR>
-
-" Quit window on <leader>q
-nnoremap <leader>q :q<CR>
-
-" Save on <leader>w or :W
-nnoremap <leader>w :w<CR>
-command! W :w
-
-" Correct my typos
-command! Q :q
-command! Wq :wq
-command! WQ :wq
-
-" Remove trailing whitespace on <leader>S
-nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Load pathogen with docs for all plugins
-filetype off
 "call pathogen#runtime_append_all_bundles()
-call pathogen#infect()
-call pathogen#helptags()
+"call pathogen#infect()
+"call pathogen#helptags()
 
 " Basic settings
 syntax on                     " Syntax highlighing
@@ -121,11 +91,12 @@ set showmatch               " Briefly jump to a paren once it's balanced
 set incsearch               " Incrementally search while typing a /regex
 set gdefault                " Applies substitutions globally on lines
 
+let mapleader=","             " Change the leader to be a comma vs slash
+
 " Hide matches on <leader>space
 nnoremap <leader><space> :noh<CR>
 nnoremap <tab> %
 vnoremap <tab> %
-
 
 " Python specific
 au FileType python set omnifunc=pythoncomplete#Complete
@@ -135,3 +106,32 @@ au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\
 " Run pep8
 let g:pep8_map='<leader>8'
 
+" Reload .vimrc
+map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+" Ctrl-jklm  changes to that split
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" Open NerdTree
+map <leader>n :NERDTreeToggle<CR>
+
+" Toggle paste mode
+map <leader>p :set paste!<CR>
+
+" Quit window on <leader>q
+nnoremap <leader>q :q<CR>
+
+" Save on <leader>w or :W
+nnoremap <leader>w :w<CR>
+command! W :w
+
+" Correct my typos
+command! Q :q
+command! Wq :wq
+command! WQ :wq
+
+" Remove trailing whitespace on <leader>S
+nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>

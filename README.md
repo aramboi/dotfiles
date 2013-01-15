@@ -1,7 +1,7 @@
 Install
 =======
 
-    $ wget --no-check-certificate https://raw.github.com/limpangel/dotfiles/master/install.sh -O - | /bin/bash
+    wget -qO- https://raw.github.com/limpangel/dotfiles/master/install.sh | /bin/bash
 
 This will install: pip (with all dependencies), flake8 (for python syntax), the dotfiles, vundle and vim plugins (using vundle).
 

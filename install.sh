@@ -19,14 +19,16 @@ else
     git clone git://github.com/limpangel/dotfiles.git ~/.dotfiles
     git clone https://github.com/gmarik/vundle.git ~/.dotfiles/.vim/bundle/vundle
     cd ~/.dotfiles
+
+    for f in .*
+    do
+        link_file $f
+    done
+
+    sudo apt-get -y install python-pip
+    sudo pip install pip --upgrade
+    sudo pip install flake8 --upgrade
+    vim +BundleInstall +qall
 fi
 
-for f in .*
-do
-    link_file $f
-done
 
-sudo apt-get -y install python-pip
-sudo pip install pip --upgrade
-sudo pip install flake8 --upgrade
-vim +BundleInstall +qall

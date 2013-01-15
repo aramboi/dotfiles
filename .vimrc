@@ -5,11 +5,17 @@
 set nocompatible              " Don't be compatible with vi
 filetype off
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-" Load pathogen with docs for all plugins
-"call pathogen#runtime_append_all_bundles()
-"call pathogen#infect()
-"call pathogen#helptags()
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'Raimondi/delimitMate'
+Bundle 'vim-scripts/AutoComplPop'
 
 " Basic settings
 syntax on                     " Syntax highlighing
@@ -104,7 +110,7 @@ au FileType python setlocal cinwords=if,elif,else,for,while,try,except,finally,d
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
 " Run pep8
-let g:pep8_map='<leader>8'
+"let g:pep8_map='<leader>8'
 
 " Reload .vimrc
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>

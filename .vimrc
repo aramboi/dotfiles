@@ -8,14 +8,14 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'Raimondi/delimitMate'
-Bundle 'vim-scripts/AutoComplPop'
+Bundle 'gmarik/vundle.git'
+Bundle 'tpope/vim-fugitive.git'
+Bundle 'tpope/vim-surround.git'
+Bundle 'scrooloose/syntastic.git'
+Bundle 'scrooloose/nerdtree.git'
+Bundle 'scrooloose/nerdcommenter.git'
+Bundle 'Raimondi/delimitMate.git'
+Bundle 'vim-scripts/AutoComplPop.git'
 
 " Basic settings
 syntax on                     " Syntax highlighing

@@ -16,6 +16,8 @@ Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'Raimondi/delimitMate.git'
 Bundle 'vim-scripts/AutoComplPop.git'
+Bundle 'Lokaltog/vim-powerline.git'
+
 
 " Basic settings
 syntax on                     " Syntax highlighing
@@ -81,7 +83,7 @@ set showcmd                 " Show incomplete normal mode commands as I type
 set report=0                " : commands always print changed line count
 set shortmess+=a            " Use [+]/[RO]/[w] for modified/readonly/written
 set laststatus=2            " Always show statusline, even if only 1 window
-set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
+"set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
 
 " Displays tabs with :set list & displays when a line runs off-screen
 set listchars=tab:>-,eol:‖,trail:»,precedes:<,extends:>
@@ -144,4 +146,3 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Syntastic
 let g:syntastic_check_on_open=1
-

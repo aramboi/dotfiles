@@ -15,6 +15,7 @@ if [ -d ~/.dotfiles ]; then
     git pull origin master
 else
     git clone git://github.com/limpangel/dotfiles.git ~/.dotfiles
+    git clone https://github.com/gmarik/vundle.git ~/.dotfiles/.vim/bundle/vundle
     cd ~/.dotfiles
 fi
 

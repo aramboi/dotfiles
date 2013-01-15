@@ -6,7 +6,10 @@ Install
 Vim
 ===
 
-NOTE: Install dependencies: pep8, pyflakes
+Install dependencies: http://pypi.python.org/pypi/flake8
+
+    sudo pip install flake8 --upgrade
+
 
 Various sources from where I draw inspiration for the vim configuration
 

@@ -1,6 +1,6 @@
 " Author - Angel Ramboi <angel.ramboi@gmail.com>
 " https://github.com/limpangel/dotfiles
-" Dependencies - pep8, pyflakes
+" Dependencies - http://pypi.python.org/pypi/flake8
 
 set nocompatible              " Don't be compatible with vi
 filetype off
@@ -28,14 +28,11 @@ set background=dark           " We are using dark background
 set title                     " Show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
-colorscheme molokai           " I like molokai as my collor scheme
+set wildignore+=*.o,*.obj,.git,*.pyc,*swp,eggs/**,*.egg-info/**,*.un~ " Ignore these files when completing
+set backupdir=~/.vim/tmp/bak/ " Backup files folder
+set directory=~/.vim/tmp/swp/ " Swap files folder
 
-" Ignore these files when completing
-set wildignore+=*.o,*.obj,.git,*.pyc,*swp,eggs/**,*.egg-info/**,*.un~
-
-" Insert completion - don't select first item, follow typing in autocomplete
-set completeopt=menuone,longest,preview
-set pumheight=8             " Keep a small completion window
+colorscheme molokai           " I like molokai (with some personal tweaks)
 
 " Moving Around/Editing
 set encoding=utf-8          " Set encoding to UTF-8
@@ -59,6 +56,9 @@ set matchpairs+=<:>         " Show matching <> (html mainly) as well
 set foldmethod=indent       " Allow us to fold on indents
 set foldlevel=99            " Don't fold by default
 set colorcolumn=79          " Color column to mark the end 80 char limit
+set iskeyword+=_            " Underscore is part of a word in my world.
+set completeopt=menuone,longest,preview " Insert completion - don't select first item, follow typing in autocomplete
+set pumheight=8             " Keep a small completion window
 
 " Creates undo files (*.un~) for undoes after close/open file (vim 7.3)
 "set undofile
@@ -97,6 +97,7 @@ set showmatch               " Briefly jump to a paren once it's balanced
 set incsearch               " Incrementally search while typing a /regex
 set gdefault                " Applies substitutions globally on lines
 
+
 let mapleader=","             " Change the leader to be a comma vs slash
 
 " Hide matches on <leader>space
@@ -109,9 +110,6 @@ au FileType python set omnifunc=pythoncomplete#Complete
 au FileType python setlocal cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
-" Run pep8
-"let g:pep8_map='<leader>8'
-
 " Reload .vimrc
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
@@ -121,8 +119,10 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-" Open NerdTree
+" NerdTree
 map <leader>n :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeShowHidden=1
 
 " Toggle paste mode
 map <leader>p :set paste!<CR>
@@ -141,3 +141,7 @@ command! WQ :wq
 
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Syntastic
+let g:syntastic_check_on_open=1
+

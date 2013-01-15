@@ -1,15 +1,9 @@
 Install
 =======
 
-Install dependencies: http://pypi.python.org/pypi/flake8
-
-    $ sudo pip install flake8 --upgrade
-
-Install dotfiles:
-
     $ wget --no-check-certificate https://raw.github.com/limpangel/dotfiles/master/install.sh -O - | /bin/bash
 
-Vim
+Credits
 ===
 
 Various sources from where I draw inspiration for the vim configuration:

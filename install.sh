@@ -11,6 +11,8 @@ function link_file {
 }
 
 if [ -d ~/.dotfiles ]; then
+    cd ~/.dotfiles/.vim/bundle/vundle/
+    git pull origin master
     cd ~/.dotfiles
     git pull origin master
 else
@@ -23,3 +25,8 @@ for f in .*
 do
     link_file $f
 done
+
+sudo apt-get -y install python-pip
+sudo pip install pip --upgrade
+sudo pip install flake8 --upgrade
+vim +BundleInstall +qall

@@ -1,6 +1,8 @@
 " Author - Angel Ramboi <angel.ramboi@gmail.com>
 " https://github.com/limpangel/dotfiles
-" Dependencies - http://pypi.python.org/pypi/flake8
+" Dependencies:
+" - http://pypi.python.org/pypi/flake8
+" - ack-grep
 
 set nocompatible              " Don't be compatible with vi
 filetype off
@@ -17,6 +19,7 @@ Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'Raimondi/delimitMate.git'
 Bundle 'vim-scripts/AutoComplPop.git'
 Bundle 'Lokaltog/vim-powerline.git'
+Bundle 'mileszs/ack.vim'
 
 
 " Basic settings

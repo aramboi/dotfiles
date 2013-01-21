@@ -29,7 +29,7 @@ else
         link_file $f
     done
 
-    sudo apt-get -y install python-pip
+    sudo apt-get -y install python-pip ack-grep
     sudo pip install pip --upgrade
     sudo pip install flake8 --upgrade
     vim -u ~/.dotfiles/.vimrc - +BundleInstall +qall

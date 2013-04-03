@@ -33,7 +33,7 @@ set background=dark           " We are using dark background
 set title                     " Show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
-set wildignore+=*.o,*.obj,.git,*.pyc,*swp,eggs/**,*.egg-info/**,*.un~ " Ignore these files when completing
+set wildignore+=*.o,*.obj,.git,*.pyc,*.pyo,*swp,eggs/**,*.egg-info/**,*.un~ " Ignore these files when completing
 set backupdir=~/.vim/tmp/bak/ " Backup files folder
 set directory=~/.vim/tmp/swp/ " Swap files folder
 

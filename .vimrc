@@ -127,7 +127,7 @@ map <c-h> <c-w>h
 
 " NerdTree
 map <leader>n :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$', '\.pyo']
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 let NERDTreeShowHidden=1
 
 " Toggle paste mode

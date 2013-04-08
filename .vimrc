@@ -114,6 +114,7 @@ vnoremap <tab> %
 au FileType python set omnifunc=pythoncomplete#Complete
 au FileType python setlocal cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+ab ipdb import pdb;pdb.set_trace()
 
 " Reload .vimrc
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
@@ -126,7 +127,7 @@ map <c-h> <c-w>h
 
 " NerdTree
 map <leader>n :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '\.pyo']
 let NERDTreeShowHidden=1
 
 " Toggle paste mode

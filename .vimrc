@@ -105,10 +105,17 @@ set gdefault                " Applies substitutions globally on lines
 
 let mapleader=","             " Change the leader to be a comma vs slash
 
+" Force saving files that require root permission
+cmap w!! %!sudo tee > /dev/null %
+
 " Hide matches on <leader>space
 nnoremap <leader><space> :noh<CR>
 nnoremap <tab> %
 vnoremap <tab> %
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
 
 " Python specific
 au FileType python set omnifunc=pythoncomplete#Complete

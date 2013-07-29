@@ -1,7 +1,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="candy"
 
-plugins=(git osx brew history-substring-search zsh-syntax-highlighting vagrant virtualenvwrapper pip)
+plugins=(git osx brew history-substring-search zsh-syntax-highlighting vagrant pip)
 
 source $ZSH/oh-my-zsh.sh
 

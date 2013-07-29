@@ -20,6 +20,8 @@ Bundle 'Raimondi/delimitMate.git'
 Bundle 'vim-scripts/AutoComplPop.git'
 Bundle 'Lokaltog/vim-powerline.git'
 Bundle 'mileszs/ack.vim'
+Bundle 'altercation/vim-colors-solarized.git'
+"Bundle 'davidhalter/jedi-vim'
 
 
 " Basic settings
@@ -37,7 +39,8 @@ set wildignore+=*.o,*.obj,.git,*.pyc,*.pyo,*swp,eggs/**,*.egg-info/**,*.un~ " Ig
 set backupdir=~/.vim/tmp/bak/ " Backup files folder
 set directory=~/.vim/tmp/swp/ " Swap files folder
 
-colorscheme molokai           " I like molokai (with some personal tweaks)
+"colorscheme molokai           " I like molokai (with some personal tweaks)
+colorscheme solarized
 
 " Moving Around/Editing
 set encoding=utf-8          " Set encoding to UTF-8

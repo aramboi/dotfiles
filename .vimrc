@@ -124,7 +124,7 @@ vnoremap > >gv
 au FileType python set omnifunc=pythoncomplete#Complete
 au FileType python setlocal cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
-map <leader>d :normal iimport pdb;pdb.set_trace()<ESC>
+map <leader>d :normal Oimport pdb;pdb.set_trace()<ESC>
 
 " Reload .vimrc
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>

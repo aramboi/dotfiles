@@ -13,6 +13,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle.git'
 Bundle 'tpope/vim-fugitive.git'
 Bundle 'tpope/vim-surround.git'
+Bundle 'tpope/vim-repeat.git'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'scrooloose/nerdcommenter.git'

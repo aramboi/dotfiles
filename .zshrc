@@ -5,15 +5,21 @@ plugins=(git osx brew history-substring-search zsh-syntax-highlighting vagrant p
 
 source $ZSH/oh-my-zsh.sh
 
-export EDITOR=/usr/bin/vim
+export EDITOR=`which vim`
+
+# aliases
+alias vup='vagrant up'
+alias vds='vagrant destroy'
+alias vsh='vagrant ssh'
 
 # virtualenv related
-export VIRTUALENV_USE_DISTRIBUTE=1
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENV_PYTHON=`which python`
+export VIRTUALENVWRAPPER_PYTHON=`which python`
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
+
+source /usr/local/bin/virtualenvwrapper.sh
 
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 

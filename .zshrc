@@ -1,7 +1,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="candy"
 
-plugins=(git osx brew history-substring-search zsh-syntax-highlighting vagrant pip)
+plugins=(git osx brew history-substring-search zsh-syntax-highlighting vagrant pip docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -25,6 +25,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 
-export DOCKER_HOST=tcp://localhost:4243
+export DOCKER_HOST=tcp://192.168.59.103:2375
 
 #PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'

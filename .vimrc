@@ -1,9 +1,3 @@
-" Author - Angel Ramboi <angel.ramboi@gmail.com>
-" https://github.com/limpangel/dotfiles
-" Dependencies:
-" - http://pypi.python.org/pypi/flake8
-" - ack-grep
-
 set nocompatible              " Don't be compatible with vi
 filetype off
 
@@ -22,6 +16,7 @@ Bundle 'vim-scripts/AutoComplPop.git'
 Bundle 'Lokaltog/vim-powerline.git'
 Bundle 'mileszs/ack.vim'
 Bundle 'altercation/vim-colors-solarized.git'
+Bundle 'jnurmine/Zenburn.git'
 "Bundle 'davidhalter/jedi-vim'
 
 
@@ -41,7 +36,8 @@ set backupdir=~/.vim/tmp/bak/ " Backup files folder
 set directory=~/.vim/tmp/swp/ " Swap files folder
 
 "colorscheme molokai           " I like molokai (with some personal tweaks)
-colorscheme solarized
+colorscheme zenburn
+colors zenburn
 
 " Moving Around/Editing
 set encoding=utf-8          " Set encoding to UTF-8
@@ -138,7 +134,7 @@ map <c-h> <c-w>h
 
 " NerdTree
 map <leader>n :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.git$']
 let NERDTreeShowHidden=1
 
 " Toggle paste mode

@@ -1,7 +1,7 @@
 Install (tested only on Ubuntu >= 12.04)
 ========================================
 
-    wget -qO- https://raw.github.com/limpangel/dotfiles/master/install.sh | /bin/bash
+    wget -qO- https://bitbucket.org/aramboi/dotfiles/raw/master/install.sh | /bin/bash
 
 This will install: pip (with all dependencies), flake8 (for python syntax), ack, the dotfiles, vundle and vim plugins (using vundle).
 

@@ -35,7 +35,6 @@ set wildignore+=*.o,*.obj,.git,*.pyc,*.pyo,*swp,eggs/**,*.egg-info/**,*.un~ " Ig
 set backupdir=~/.vim/tmp/bak/ " Backup files folder
 set directory=~/.vim/tmp/swp/ " Swap files folder
 
-"colorscheme molokai           " I like molokai (with some personal tweaks)
 colorscheme zenburn
 colors zenburn
 
@@ -145,9 +144,9 @@ nnoremap <leader>q :q<CR>
 
 " Save on <leader>w or :W
 nnoremap <leader>w :w<CR>
-command! W :w
 
 " Correct my typos
+command! W :w
 command! Q :q
 command! Wq :wq
 command! WQ :wq
@@ -157,3 +156,4 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Syntastic
 let g:syntastic_check_on_open=1
+

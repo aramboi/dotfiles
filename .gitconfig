@@ -2,10 +2,10 @@
 
 [user]
     name = Angel Ramboi
-    email = angel@fastmail.fm
+    email = angel@fastmail.com
 
 [github]
-    user = limpangel
+    user = aramboi
 
 [core]
     editor = vim

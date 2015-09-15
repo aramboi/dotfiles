@@ -59,7 +59,7 @@ set shiftround              " Rounds indent to a multiple of shiftwidth
 set matchpairs+=<:>         " Show matching <> (html mainly) as well
 set foldmethod=indent       " Allow us to fold on indents
 set foldlevel=99            " Don't fold by default
-set colorcolumn=79          " Color column to mark the end 80 char limit
+set colorcolumn=80          " Color column to mark the end 80 char limit
 set iskeyword+=_            " Underscore is part of a word in my world.
 set completeopt=menuone,longest,preview " Insert completion - don't select first item, follow typing in autocomplete
 set pumheight=8             " Keep a small completion window
@@ -88,7 +88,7 @@ set laststatus=2            " Always show statusline, even if only 1 window
 "set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
 
 " Displays tabs with :set list & displays when a line runs off-screen
-set listchars=tab:>-,eol:‖,trail:»,precedes:<,extends:>
+set listchars=tab:>-,trail:·,precedes:<,extends:>
 set list
 
 " Searching and Patterns
@@ -156,4 +156,3 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Syntastic
 let g:syntastic_check_on_open=1
-

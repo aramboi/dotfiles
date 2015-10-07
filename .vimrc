@@ -4,20 +4,20 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle.git'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'tpope/vim-surround.git'
-Bundle 'tpope/vim-repeat.git'
-Bundle 'scrooloose/syntastic.git'
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'scrooloose/nerdcommenter.git'
-Bundle 'Raimondi/delimitMate.git'
-Bundle 'vim-scripts/AutoComplPop.git'
-Bundle 'Lokaltog/vim-powerline.git'
-Bundle 'mileszs/ack.vim'
-Bundle 'altercation/vim-colors-solarized.git'
-Bundle 'jnurmine/Zenburn.git'
-"Bundle 'davidhalter/jedi-vim'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Raimondi/delimitMate'
+Plugin 'vim-scripts/AutoComplPop'
+Plugin 'mileszs/ack.vim'
+Plugin 'tmux-plugins/vim-tmux'
+Plugin 'bling/vim-airline'
+"Plugin 'davidhalter/jedi-vim'
+Plugin 'jnurmine/Zenburn'
 
 
 " Basic settings
@@ -133,7 +133,7 @@ map <c-h> <c-w>h
 
 " NerdTree
 map <leader>n :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.git$']
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.git$', '__pycache__']
 let NERDTreeShowHidden=1
 
 " Toggle paste mode

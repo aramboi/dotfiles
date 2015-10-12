@@ -1,6 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="candy"
-plugins=(git history-substring-search zsh-syntax-highlighting pip django vagrant docker)
+plugins=(git history-substring-search syntax-highlighting pip django vagrant docker)
 source $ZSH/oh-my-zsh.sh
 export EDITOR=`which vim`
 

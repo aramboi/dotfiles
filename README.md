@@ -1,15 +1,19 @@
-Install (tested only on Ubuntu >= 12.04)
-========================================
+Install (tested on Ubuntu >= 14.04)
+===================================
+
+Run this (you can trust me :P):
 
     wget -qO- https://bitbucket.org/aramboi/dotfiles/raw/master/install.sh | /bin/bash
 
-This will install: pip (with all dependencies), flake8 (for python syntax), ack, the dotfiles, vundle and vim plugins (using vundle).
+This will install/upgrade: pip, flake8, tmux, ack, vundle (with vim plugins)
+and of course the dotfiles.
 
 Credits
-===
+=======
 
-Various sources from where I draw inspiration for the vim configuration:
+Various sources from where I drew inspiration for the vim configuration:
 
+* http://dougblack.io/words/a-good-vimrc.html
 * http://stevelosh.com/blog/2010/09/coming-home-to-vim
 * https://github.com/sjl/dotfiles
 * http://sontek.net/turning-vim-into-a-modern-python-ide

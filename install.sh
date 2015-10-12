@@ -1,4 +1,5 @@
 #!/bin/bash
+
 function link_file {
     source="${PWD}/$1"
     target="${HOME}/$1"
@@ -10,27 +11,30 @@ function link_file {
     ln -sf ${source} ${target}
 }
 
+sudo apt-get -y install git-core python-pip ack-grep vim zsh tmux
+
 if [ -d ~/.dotfiles ]; then
-    cd ~/.dotfiles/.vim/bundle/vundle/
+    cd ~/.dotfiles/.vim/bundle/Vundle.vim/
     git pull origin master
     cd ~/.dotfiles
     git pull origin master
 
-    sudo pip install pip --upgrade
-    sudo pip install flake8 --upgrade
-    vim -u ~/.dotfiles/.vimrc - +BundleInstall! +BundleClean! +qall
+    sudo -H pip install pip --upgrade
+    sudo -H pip install flake8 --upgrade
+    vim -u ~/.dotfiles/.vimrc - +PluginUpdate +PluginClean! +qall
 else
-    git clone https://aramboi@bitbucket.org/aramboi/dotfiles.git ~/.dotfiles
-    git clone https://github.com/gmarik/vundle.git ~/.dotfiles/.vim/bundle/vundle
+    git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+    git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/syntax-highlighting
+    git clone https://bitbucket.org/aramboi/dotfiles.git ~/.dotfiles
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.dotfiles/.vim/bundle/Vundle.vim
     cd ~/.dotfiles
 
-    for f in .vim .vimrc .zshrc .gitconfig
+    for f in .vim .vimrc .zshrc .gitconfig .tmux
     do
         link_file $f
     done
 
-    sudo apt-get -y install python-pip ack-grep
-    sudo pip install pip --upgrade
-    sudo pip install flake8 --upgrade
-    vim -u ~/.dotfiles/.vimrc - +BundleInstall +qall
+    sudo -H pip install pip --upgrade
+    sudo -H pip install flake8 --upgrade
+    vim -u ~/.dotfiles/.vimrc - +PluginInstall +qall
 fi

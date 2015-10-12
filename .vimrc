@@ -1,8 +1,8 @@
 set nocompatible              " Don't be compatible with vi
-filetype off
+filetype off                  " required by Vundle
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
@@ -19,6 +19,8 @@ Plugin 'bling/vim-airline'
 "Plugin 'davidhalter/jedi-vim'
 Plugin 'jnurmine/Zenburn'
 
+" Plugins must be added before the following line
+call vundle#end()             " required
 
 " Basic settings
 syntax on                     " Syntax highlighing

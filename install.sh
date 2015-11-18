@@ -24,7 +24,7 @@ if [ -d ~/.dotfiles ]; then
     vim -u ~/.dotfiles/.vimrc - +PluginUpdate +PluginClean! +qall
 else
     git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-    git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/syntax-highlighting
+    git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
     git clone https://bitbucket.org/aramboi/dotfiles.git ~/.dotfiles
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.dotfiles/.vim/bundle/Vundle.vim
     cd ~/.dotfiles

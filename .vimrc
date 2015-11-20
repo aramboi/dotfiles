@@ -158,3 +158,5 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Syntastic
 let g:syntastic_check_on_open=1
+
+let g:airline_powerline_fonts=1

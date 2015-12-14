@@ -11,6 +11,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'mileszs/ack.vim'
@@ -52,9 +53,9 @@ set nowrap                  " Don't wrap text
 set linebreak               " Don't wrap textin the middle of a word
 set autoindent              " Always set autoindenting on
 set smartindent             " Use smart indent if there is no indent file
-set tabstop=8               " <Tab> inserts 4 spaces
-set shiftwidth=4            " Indent level is 4 spaces wide
-set softtabstop=4           " <BS> over an autoindent deletes both spaces
+set tabstop=2               " <Tab> inserts the set number of spaces
+set shiftwidth=2            " Indent level is the set number of spaces wide
+set softtabstop=2           " <BS> over an autoindent deletes both spaces
 set smarttab                " Handle tabs more intelligently
 set expandtab               " Use spaces, not tabs, for autoindent/tab key
 set shiftround              " Rounds indent to a multiple of shiftwidth
@@ -119,10 +120,13 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Python specific
+au Filetype python setl ts=4 sts=4 sw=4 expandtab
 au FileType python set omnifunc=pythoncomplete#Complete
-au FileType python setlocal cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+au FileType python setl cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 map <leader>d :normal Oimport pdb;pdb.set_trace()<ESC>
+
+au Filetype javascript setl ts=4 sts=4 sw=4 expandtab
 
 " Reload .vimrc
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
@@ -159,4 +163,5 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 " Syntastic
 let g:syntastic_check_on_open=1
 
+" Airline setup
 let g:airline_powerline_fonts=1

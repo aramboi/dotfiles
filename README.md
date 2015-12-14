@@ -12,10 +12,10 @@
 install/update (tested on Ubuntu >= 14.04)
 ------------------------------------------
 
-The following line is just for reference. Do not run, unless you want your git
-commits to have my name in them. ;)
+The following line is just for reference. Do not use unless you know what you
+are doing.
 
     wget -qO- https://raw.githubusercontent.com/aramboi/dotfiles/master/install.sh | /bin/bash
 
-It installs git, zsh, pip, flake8, tmux, ack, vim (+vundle+plugins)
+It installs git, zsh, pip, tmux, ack, vim (+vundle+plugins)
 and sets up symbolic links to the dotfiles in the home folder.

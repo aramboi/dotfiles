@@ -17,6 +17,7 @@ Plugin 'vim-scripts/AutoComplPop'
 Plugin 'mileszs/ack.vim'
 Plugin 'tmux-plugins/vim-tmux'
 Plugin 'bling/vim-airline'
+Plugin 'airblade/vim-gitgutter'
 "Plugin 'davidhalter/jedi-vim'
 Plugin 'jnurmine/Zenburn'
 
@@ -66,6 +67,7 @@ set colorcolumn=80          " Color column to mark the end 80 char limit
 set iskeyword+=_            " Underscore is part of a word in my world.
 set completeopt=menuone,longest,preview " Insert completion - don't select first item, follow typing in autocomplete
 set pumheight=8             " Keep a small completion window
+set hidden                  " Hide buffer without writing changes to file
 
 " Creates undo files (*.un~) for undoes after close/open file (vim 7.3)
 "set undofile
@@ -145,15 +147,19 @@ let NERDTreeShowHidden=1
 " Toggle paste mode
 map <leader>p :set paste!<CR>
 
-" Quit window on <leader>q
+" Quit window on <leader>q or :Q
+command! Q :q
 nnoremap <leader>q :q<CR>
 
 " Save on <leader>w or :W
+command! W :w
 nnoremap <leader>w :w<CR>
 
+" Cycle through bufers
+nnoremap <leader>z :bn<CR>
+nnoremap <leader>x :bp<CR>
+
 " Correct my typos
-command! W :w
-command! Q :q
 command! Wq :wq
 command! WQ :wq
 
@@ -165,3 +171,4 @@ let g:syntastic_check_on_open=1
 
 " Airline setup
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1

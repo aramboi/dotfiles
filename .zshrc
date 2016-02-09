@@ -8,6 +8,8 @@ python
 django
 vagrant
 docker
+golang
+heroku
 zsh-users/zsh-history-substring-search
 zsh-users/zsh-syntax-highlighting
 EOBUNDLES
@@ -15,6 +17,7 @@ antigen theme candy
 antigen apply
 
 export EDITOR=`which vim`
+
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 

@@ -9,7 +9,7 @@ function link_file {
     ln -sf ${source} ${target}
 }
 
-sudo apt-get -y install git-core python-pip ack-grep vim zsh tmux
+sudo apt-get -y install git-core python-pip ack-grep vim zsh tmux ctags
 
 if [ -d ~/.dotfiles ]; then
     cd ~/.dotfiles
@@ -27,4 +27,5 @@ else
         link_file $f
     done
     vim -u ~/.dotfiles/.vimrc - +PluginInstall +qall
+    chsh -s /usr/bin/zsh
 fi

@@ -12,6 +12,8 @@ golang
 heroku
 zsh-users/zsh-history-substring-search
 zsh-users/zsh-syntax-highlighting
+aramboi/zsh-ipfs
+aramboi/zsh-docker-compose
 EOBUNDLES
 antigen theme candy
 antigen apply

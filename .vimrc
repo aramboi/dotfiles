@@ -172,3 +172,7 @@ let g:syntastic_check_on_open=1
 " Airline setup
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
+
+" Replace Ack with Ag
+let g:ackprg = 'ag --nogroup --nocolor --column'
+

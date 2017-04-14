@@ -12,19 +12,22 @@ antigen bundle golang
 antigen bundle heroku
 antigen bundle vagrant
 
-#antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen bundle aramboi/zsh-ipfs
 antigen bundle aramboi/zsh-docker-compose
 
-antigen theme candy
+antigen theme kphoen
 antigen apply
 
 # needed by zsh-history-substring-search to work with antigen
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+export TODOTXT_DEFAULT_ACTION=ls
+alias t='todo-txt'
 
 export EDITOR=`which vim`
 
@@ -33,3 +36,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # tmux: create a global per-pane variable that holds the pane PWD
 PS1=$PS1'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+export ANDROID_HOME=$HOME/.os_utils/android-sdk-linux/
+export PATH=${PATH}:$HOME/.os_utils/android-sdk-linux/platform-tools:$HOME/.os_utils/android-sdk-linux/tools

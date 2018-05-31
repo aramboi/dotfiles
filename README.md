@@ -9,7 +9,7 @@
 * http://rawpackets.com/2011/10/16/configuring-vim-as-a-python-ide
 * https://github.com/severb/dotfiles
 
-install/update (tested on Ubuntu >= 14.04)
+install/update (tested on Ubuntu >= 18.04)
 ------------------------------------------
 
 The following line is just for reference. Do not use unless you know what you

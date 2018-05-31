@@ -25,6 +25,3 @@
     current = cyan reverse
     local = cyan
     remote = green
-[user]
-	email = angel@ramboi.com
-	name = Angel Ramboi

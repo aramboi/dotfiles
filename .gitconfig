@@ -1,12 +1,5 @@
 # Locations: $GIT_DIR/config; ~/.gitconfig; $(prefix)/etc/gitconfig
 
-[user]
-    name = Angel Ramboi
-    email = angel@ramboi.com
-
-[github]
-    user = aramboi
-
 [core]
     editor = vim
 
@@ -32,3 +25,6 @@
     current = cyan reverse
     local = cyan
     remote = green
+[user]
+	email = angel@ramboi.com
+	name = Angel Ramboi

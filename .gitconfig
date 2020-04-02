@@ -1,27 +1,30 @@
 # Locations: $GIT_DIR/config; ~/.gitconfig; $(prefix)/etc/gitconfig
 
 [core]
-    editor = vim
+  editor = vim
 
 [color]
-    status = auto
-    branch = auto
-    diff = auto
-    ui = auto
+  status = auto
+  branch = auto
+  diff = auto
+  ui = auto
 
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+  added = yellow
+  changed = green
+  untracked = cyan
 
 [color "diff"]
-    meta = cyan
-    frag = magenta
-    old = red
-    new = green
-    whitespace = red reverse
+  meta = cyan
+  frag = magenta
+  old = red
+  new = green
+  whitespace = red reverse
 
 [color "branch"]
-    current = cyan reverse
-    local = cyan
-    remote = green
+  current = cyan reverse
+  local = cyan
+  remote = green
+
+[user]
+  useConfigOnly = true

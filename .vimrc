@@ -15,11 +15,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'mileszs/ack.vim'
-Plugin 'tmux-plugins/vim-tmux'
 Plugin 'vim-airline/vim-airline'
 Plugin 'airblade/vim-gitgutter'
-"Plugin 'davidhalter/jedi-vim'
-Plugin 'jnurmine/Zenburn'
+"Plugin 'tmux-plugins/vim-tmux'
 
 " Plugins must be added before the following line
 call vundle#end()             " required
@@ -39,8 +37,7 @@ set wildignore+=*.o,*.obj,.git,*.pyc,*.pyo,*swp,eggs/**,*.egg-info/**,*.un~ " Ig
 set backupdir=~/.vim/tmp/bak/ " Backup files folder
 set directory=~/.vim/tmp/swp/ " Swap files folder
 
-colorscheme zenburn
-colors zenburn
+colors molokai
 
 " Moving Around/Editing
 set encoding=utf-8          " Set encoding to UTF-8
@@ -90,7 +87,7 @@ set showcmd                 " Show incomplete normal mode commands as I type
 set report=0                " : commands always print changed line count
 set shortmess+=a            " Use [+]/[RO]/[w] for modified/readonly/written
 set laststatus=2            " Always show statusline, even if only 1 window
-"set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
+set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
 
 " Displays tabs with :set list & displays when a line runs off-screen
 set listchars=tab:>-,trail:·,precedes:<,extends:>
@@ -170,9 +167,8 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 let g:syntastic_check_on_open=1
 
 " Airline setup
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=0
 let g:airline#extensions#tabline#enabled=1
 
 " Replace Ack with Ag
 let g:ackprg = 'ag --nogroup --nocolor --column'
-

@@ -9,7 +9,13 @@ function link_file {
     ln -sf ${source} ${target}
 }
 
-sudo apt update && sudo apt install -y git vim zsh tmux ctags
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  sudo apt update
+  sudo apt install -y git vim zsh tmux ctags silversearcher-ag
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew update
+  brew install git vim zsh tmux ctags the_silver_searcher
 
 if [ -d ~/.dotfiles ]; then
     cd ~/.dotfiles

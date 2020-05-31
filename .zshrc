@@ -5,7 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source $HOME/.antigen/antigen.zsh
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
+source $HOME/antigen.zsh
 
 antigen use oh-my-zsh
 
@@ -38,6 +42,7 @@ alias gco='git checkout'
 alias gb='git branch'
 alias ga='git add'
 alias gc='git commit -v'
+alias gca='git commit -v -a'
 alias gd='git diff'
 alias gl='git pull'
 alias gp='git push'
